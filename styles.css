@@ -1,4 +1,4 @@
-/* Stile di reset e impostazioni base */
+/* Impostazioni base */
 * {
     margin: 0;
     padding: 0;
@@ -8,42 +8,62 @@
 body {
     font-family: 'Arial', sans-serif;
     color: #333;
-    background-color: #f4f4f9;
-    line-height: 1.6;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    overflow-x: hidden;
 }
 
-/* Stile header e sezione Hero */
+/* Header e Hero con animazioni di testo */
 header {
     background-color: #333;
     color: #fff;
     padding: 2em 0;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
 header h1 {
     font-size: 3em;
     letter-spacing: 1.5px;
     margin-bottom: 0.5em;
+    animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
 }
 
 header p {
     font-size: 1.2em;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+    animation-delay: 0.5s;
 }
 
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Sezione Hero con effetti di parallasse */
 .hero {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     padding: 5em 1em;
-    background-image: linear-gradient(to right, #6a11cb, #2575fc);
+    background: linear-gradient(to right, #6a11cb, #2575fc);
     color: #fff;
     text-align: center;
+    perspective: 1000px;
 }
 
 .hero h2 {
     font-size: 2.5em;
     margin-bottom: 0.5em;
+    transform: rotateY(-15deg);
+    animation: heroTextRotate 3s infinite alternate ease-in-out;
 }
 
 .hero p {
@@ -51,12 +71,18 @@ header p {
     max-width: 600px;
 }
 
-/* Stile navbar */
+@keyframes heroTextRotate {
+    from { transform: rotateY(-15deg); }
+    to { transform: rotateY(15deg); }
+}
+
+/* Navbar interattiva */
 nav {
     display: flex;
     justify-content: center;
     background-color: #444;
     padding: 0.75em 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
@@ -64,22 +90,23 @@ nav a {
     padding: 0.5em 1.5em;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s, background-color 0.3s;
+    transition: color 0.3s, background-color 0.3s, transform 0.3s;
 }
 
 nav a:hover {
     background-color: #555;
     color: #eaeaea;
+    transform: scale(1.1);
 }
 
-/* Stile sezione contenuto */
+/* Container sezioni */
 .container {
     max-width: 1000px;
     margin: 3em auto;
     padding: 0 1em;
 }
 
-/* Card progetti */
+/* Card con effetto 3D e ombreggiature */
 .projects {
     display: flex;
     gap: 2em;
@@ -89,15 +116,17 @@ nav a:hover {
 
 .card {
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     width: 300px;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
+    perspective: 1000px;
 }
 
 .card:hover {
-    transform: scale(1.05);
+    transform: translateY(-10px) rotateY(10deg);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
 .card img {
@@ -133,7 +162,7 @@ nav a:hover {
     color: #2575fc;
 }
 
-/* Footer con social icons */
+/* Footer con effetti icone social */
 footer {
     background-color: #333;
     color: #fff;
@@ -151,14 +180,20 @@ footer .social-icons {
 footer .social-icons a {
     color: #fff;
     font-size: 1.5em;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s;
 }
 
 footer .social-icons a:hover {
     color: #6a11cb;
+    transform: rotate(-15deg) scale(1.2);
 }
 
-/* Media queries schermi più piccoli */
+footer p {
+    font-size: 0.9em;
+    color: #bbb;
+}
+
+/* Media queries */
 @media (max-width: 600px) {
     header h1 {
         font-size: 2.5em;
@@ -166,10 +201,6 @@ footer .social-icons a:hover {
 
     .hero h2 {
         font-size: 2em;
-    }
-
-    .container {
-        padding: 0 1em;
     }
 
     .projects {
