@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ugo Manzo | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -16,20 +17,42 @@
         <a href="#projects">Progetti</a>
         <a href="#contact">Contatti</a>
     </nav>
-    <div class="content">
-        <section id="about">
-            <h2>Benvenuto nel mio sito!</h2>
-            <p>Mi chiamo Ugo Manzo e sono uno studente di informatica con una grande passione per la programmazione.</p>
-        </section>
+
+    <section class="hero">
+        <h2>Benvenuto nel mio Portfolio</h2>
+        <p>Sono uno studente di informatica con una grande passione per il software e lo sviluppo. Scopri i miei progetti!</p>
+    </section>
+
+    <div class="container">
         <section id="projects">
-            <h3>Progetti</h3>
-            <ul>
-                <li><a href="">Progetto 1</a></li>
-                <li><a href="">Progetto 2</a></li>
-            </ul>
+            <h2>Progetti</h2>
+            <div class="projects">
+                <div class="card">
+                    <img src="project1.jpg" alt="Immagine del Progetto 1">
+                    <div class="card-body">
+                        <h3 class="card-title">Progetto 1</h3>
+                        <p class="card-text">Descrizione breve del progetto 1, con funzionalità e tecnologie utilizzate.</p>
+                        <a href="https://github.com/tuo_username/progetto1">Visualizza su GitHub</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="project2.jpg" alt="Immagine del Progetto 2">
+                    <div class="card-body">
+                        <h3 class="card-title">Progetto 2</h3>
+                        <p class="card-text">Descrizione breve del progetto 2, con funzionalità e tecnologie utilizzate.</p>
+                        <a href="https://github.com/tuo_username/progetto2">Visualizza su GitHub</a>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
+
     <footer>
+        <div class="social-icons">
+            <a href="https://github.com/tuo_username" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/tuo_username" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:tuo_email@example.com"><i class="fas fa-envelope"></i></a>
+        </div>
         <p>&copy; 2024 Ugo Manzo. Tutti i diritti riservati.</p>
     </footer>
 </body>
