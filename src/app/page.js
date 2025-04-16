@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -50,18 +51,18 @@ export default function Home() {
         transition={{ delay: 0.5, duration: 0.6 }}
         className="flex flex-col sm:flex-row gap-4 mt-4"
       >
-        <a
+        <Link
           href="/projects"
           className="bg-blue-600 text-white px-6 py-3 rounded-md shadow hover:bg-blue-700 transition"
         >
           Guarda i miei progetti
-        </a>
-        <a
+        </Link>
+        <Link
           href="/about"
           className="border border-blue-600 text-blue-600 px-6 py-3 rounded-md hover:bg-blue-50 transition"
         >
           Scopri chi sono
-        </a>
+        </Link>
       </motion.div>
       <section className="w-full py-16 px-4 bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 mt-20">
         <div className="max-w-5xl mx-auto">
