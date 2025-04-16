@@ -6,7 +6,7 @@ import Link from "next/link"
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center text-center px-6 py-20 gap-10 sm:gap-16">
+    <main className="flex flex-col items-center text-center px-6 py-20 gap-10 sm:gap-16 bg-gradient-to-b from-blue-100 via-white to-white dark:from-gray-900 dark:via-gray-950 dark:to-gray-950 transition-colors duration-500">
       {/* Avatar */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
@@ -29,7 +29,7 @@ export default function Home() {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl sm:text-5xl font-bold"
+          className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent leading-tight sm:leading-[1.2] mb-2"
         >
           Ciao, sono Ugo Manzo
         </motion.h1>
@@ -53,7 +53,7 @@ export default function Home() {
       >
         <Link
           href="/projects"
-          className="bg-blue-600 text-white px-6 py-3 rounded-md shadow hover:bg-blue-700 transition"
+          className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-6 py-3 rounded-md shadow hover:from-blue-700 hover:to-blue-600 transition"
         >
           Guarda i miei progetti
         </Link>
@@ -64,7 +64,7 @@ export default function Home() {
           Scopri chi sono
         </Link>
       </motion.div>
-      <section className="w-full py-16 px-4 bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 mt-20">
+      <section className="w-full py-16 px-4 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950 border-t border-gray-200 dark:border-gray-800 mt-20 transition-colors duration-500">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10 text-gray-800 dark:text-white">
             Cosa faccio
@@ -74,7 +74,7 @@ export default function Home() {
               {
                 emoji: "🧑‍💻",
                 title: "Sviluppo software",
-                desc: "Creo progetti concreti usando tecnologie moderne come React, Next.js, C e Java.",
+                desc: "Creo progetti concreti usando tecnologie moderne",
               },
               {
                 emoji: "🎓",
