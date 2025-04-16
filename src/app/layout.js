@@ -18,11 +18,27 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="it">
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50 text-gray-900`}>
+        <header className="bg-gray-900 text-white text-center py-4 text-xl font-semibold shadow">
+          Ugo Manzo
+        </header>
+
+        <nav className="bg-gray-800 text-white flex justify-center gap-6 py-3">
+          <a href="/" className="hover:underline">Home</a>
+          <a href="/about" className="hover:underline">Chi sono</a>
+          <a href="/skills" className="hover:underline">Competenze</a>
+          <a href="/projects" className="hover:underline">Progetti</a>
+          <a href="/contact" className="hover:underline">Contatti</a>
+        </nav>
+
+        <main className="min-h-screen px-4 py-8">
+          {children}
+        </main>
+
+        <footer className="bg-gray-100 text-center text-sm text-gray-500 py-4 border-t mt-8">
+          © {new Date().getFullYear()} Ugo Manzo – Tutti i diritti riservati.
+        </footer>
       </body>
     </html>
   );
