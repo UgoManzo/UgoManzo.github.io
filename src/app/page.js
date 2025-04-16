@@ -40,7 +40,7 @@ export default function Home() {
           transition={{ delay: 0.3, duration: 0.8 }}
           className="text-lg sm:text-xl text-gray-600"
         >
-          Studente di Informatica con passione per la programmazione, l'intelligenza artificiale e i sistemi complessi.
+          Studente di Informatica con passione per la programmazione, l&apos;intelligenza artificiale e i sistemi complessi.
         </motion.p>
       </div>
 
