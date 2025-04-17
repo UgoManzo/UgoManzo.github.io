@@ -1,0 +1,119 @@
+:root {
+    --bg: #f9f9f9;
+    --text: #222;
+    --header-bg: #111;
+    --header-text: white;
+    --footer-bg: #eee;
+    --footer-text: #555;
+    --link: #007bff;
+  }
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* HEADER */
+  header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  /* NAVBAR */
+  nav {
+    background-color: #333;
+    padding: 0.5rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  nav li {
+    display: inline;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* MAIN CONTENT */
+  main {
+    flex: 1;
+    padding: 2rem;
+  }
+  
+  /* FOOTER */
+  footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  /* TOGGLE AREA (theme + language) */
+  .top-controls {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+  }
+  
+  /* THEME TOGGLE BUTTON */
+  button#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text);
+    transition: color 0.3s;
+  }
+  
+  /* LANGUAGE TOGGLE LINK */
+  .lang-toggle {
+    font-size: 1rem;
+    text-decoration: none;
+    background: none;
+    border: none;
+    color: var(--text);
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  /* DARK THEME */
+  body.dark {
+    --bg: #121212;
+    --text: #f0f0f0;
+    --header-bg: #1f1f1f;
+    --header-text: white;
+    --footer-bg: #1f1f1f;
+    --footer-text: #aaa;
+    --link: #4ea0ff;
+  }
+  
+  body.dark .top-controls {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
