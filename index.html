@@ -7,6 +7,16 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QX3BR6KFF5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-QX3BR6KFF5');
+  </script>
 </head>
 <body>
     <div class="top-controls">
@@ -28,19 +38,24 @@
 
   <main>
     <!-- Chi sono -->
-    <section id="chi-sono">
+    <section id="chi-sono" class="about-section">
       <h2>Chi sono</h2>
-      <p>
-        Mi chiamo Ugo e studio Informatica all'Università di Salerno. Ho sempre avuto una forte attrazione per la tecnologia:
-        ho iniziato a usare il computer prima ancora di saper scrivere. Dopo un periodo di pausa post-diploma in cui mi sono messo in discussione,
-        ho ritrovato la passione per questa materia e ora la affronto con dedizione e curiosità.
-      </p>
-      <p>
-        Mi affascinano la precisione, l’eleganza e la logica dietro ogni soluzione. Credo che ogni problema, anche il più complesso, possa essere affrontato con metodo,
-        analisi e creatività. Oggi coltivo le mie competenze giorno dopo giorno con l’obiettivo di crescere come sviluppatore e come persona.
-      </p>
+      <div class="about-content">
+        <img src="ugo.jpg" alt="Foto di Ugo Manzo" class="profile-pic" />
+        <div class="about-text">
+          <p>
+            Mi chiamo Ugo e studio Informatica all'Università di Salerno. Ho sempre avuto una forte attrazione per la tecnologia:
+            ho iniziato a usare il computer prima ancora di saper scrivere. Dopo un periodo di pausa post-diploma in cui mi sono messo in discussione,
+            ho ritrovato la passione per questa materia e ora la affronto con dedizione e curiosità. 
+          </p>
+          <p>
+            Mi affascinano la precisione, l’eleganza e la logica dietro ogni soluzione. Credo che ogni problema, anche il più complesso, possa essere affrontato con metodo,
+            analisi e creatività. Oggi coltivo le mie competenze giorno dopo giorno con l’obiettivo di crescere come sviluppatore e come persona.
+          </p>
+        </div>
+      </div>
     </section>
-  
+    
     <!-- Competenze -->
     <section id="competenze">
         <h2>Competenze</h2>

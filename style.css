@@ -151,3 +151,23 @@
       gap: 0.3rem;
     }
   }
+
+  .about-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .profile-pic {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  
+  .about-text {
+    flex: 1;
+    min-width: 250px;
+  }

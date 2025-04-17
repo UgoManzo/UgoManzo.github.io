@@ -7,6 +7,16 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QX3BR6KFF5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-QX3BR6KFF5');
+  </script>
 </head>
 <body>
     <div class="top-controls">
@@ -28,17 +38,22 @@
 
   <main>
     <!-- About Me -->
-    <section id="about">
+    <section id="about" class="about-section">
       <h2>About Me</h2>
-      <p>
-        My name is Ugo and I’m currently studying Computer Science at the University of Salerno. I’ve always been curious about technology:
-        I learned to use a computer before I even knew how to write. After high school, I took some time to reflect on my path, and that break helped me understand what I truly wanted.
-      </p>
-      <p>
-        I rediscovered computer science with a new mindset and fell in love with it again. What once seemed scary now inspires me. I study with genuine interest,
-        and I enjoy solving problems not just to make things work, but to understand them deeply and explain them clearly.
-      </p>
-    </section>
+      <div class="about-content">
+        <img src="ugo.jpg" alt="Photo of Ugo Manzo" class="profile-pic" />
+        <div class="about-text">
+          <p>
+            My name is Ugo and I’m currently studying Computer Science at the University of Salerno. I’ve always been curious about technology:
+            I learned to use a computer before I even knew how to write. After high school, I took some time to reflect on my path, and that break helped me understand what I truly wanted.
+          </p>
+          <p>
+            I rediscovered computer science with a new mindset and fell in love with it again. What once seemed scary now inspires me. I study with genuine interest,
+            and I enjoy solving problems not just to make things work, but to understand them deeply and explain them clearly.
+          </p>
+        </div>
+      </div>
+    </section>    
   
     <!-- Skills -->
     <section id="skills">
