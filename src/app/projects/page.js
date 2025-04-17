@@ -1,10 +1,11 @@
 export default function ProjectsPage() {
   return (
-    <main className="p-6">
-      <h1 className="text-3xl font-bold">Progetti</h1>
-      <p className="mt-4 text-gray-700 dark:text-gray-300">
-        In questa sezione presento alcuni progetti su cui ho lavorato: applicazioni web, software universitari, esperimenti personali e idee in sviluppo.
-        Ogni progetto rappresenta un passo nel mio percorso di crescita come sviluppatore.
+    <main className="max-w-3xl mx-auto px-4 py-16">
+      <h1 className="text-3xl font-bold mb-6">Progetti</h1>
+      <p className="text-gray-700 dark:text-gray-300">
+        In questa sezione puoi trovare una selezione dei progetti su cui ho lavorato, 
+        dai siti web dinamici ai programmi di ottimizzazione e intelligenza artificiale.
+        A breve aggiungerò anche i link ai repository GitHub e le demo.
       </p>
     </main>
   );
